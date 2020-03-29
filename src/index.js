@@ -1,5 +1,9 @@
 'use strict';
 
+//babel polifile
+import "@babel/polyfill";
+
+//imports modules
 import siteTimer from './modules/siteTimer';
 import siteMenu from './modules/siteMenu';
 import sitePopup from './modules/sitePopup';
@@ -9,15 +13,12 @@ import chengeFoto from './modules/chengeFoto';
 import priceCalc from './modules/priceCalc';
 import sendFormAjax from './modules/sendFormAjax';
 
-import "@babel/polyfill";
+
+//polifile
 import 'nodelist-foreach-polyfill';
-
 const elementClosest = require('element-closest');
- 
 elementClosest(window);
-
 var Promise = require('es6-promise').Promise;
-
 
 
 

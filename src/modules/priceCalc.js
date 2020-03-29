@@ -3,7 +3,7 @@ const priceCalc = (() => {
   const inputNum = document.querySelectorAll('.calc-item');
   inputNum.forEach((elem) => {
     elem.addEventListener('input', (event) => {
-      event = elem.value.replace(/\D/g, '');
+      elem = elem.value.replace(/[^\d\+]/g, '');
     });
   });
 

@@ -1,9 +1,10 @@
 {
   "name": "lesson27",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --open --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,17 @@
     "element-closest": "^3.0.2",
     "es6-promise": "^4.2.8",
     "fetch-polyfill": "^0.8.2",
-    "formdata-polyfill": "^3.0.19"
-  }
+    "formdata-polyfill": "^3.0.19",
+    "nodelist-foreach-polyfill": "^1.2.0"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaminskyVova/3d-glo-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaminskyVova/3d-glo-site/issues"
+  },
+  "homepage": "https://github.com/kaminskyVova/3d-glo-site#readme",
+  "description": ""
 }

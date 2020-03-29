@@ -17,6 +17,7 @@ import sendFormAjax from './modules/sendFormAjax';
 //polifile
 import 'nodelist-foreach-polyfill';
 const elementClosest = require('element-closest');
+
 elementClosest(window);
 var Promise = require('es6-promise').Promise;
 

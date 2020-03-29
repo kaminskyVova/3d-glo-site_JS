@@ -5,24 +5,30 @@ const siteMenu = (function () {
       // closeBtn = document.querySelector('.close-btn'),
       menuItems = menu.querySelectorAll('ul>li');
 
-    // делегир
-    btnMenu.addEventListener('click', () => {
+     // делегир
+     btnMenu.addEventListener('click', () => {
       menu.classList.add('active-menu');
     });
 
     const body = document.querySelector('body');
+
     body.addEventListener('click', (even) => {
-      let target = even.target;
-      // console.log(target)
-      if (target.classList.contains('.menu')) {
+
+      let target = event.target;
+      target = target.closest('.menu');
+      if (target === btnMenu) {
         menu.classList.add('active-menu');
-      } else if (target.classList.contains('close-btn')) {
-        menu.classList.remove('active-menu');
-      } else if (target.tagName === 'A') {
-        menu.classList.remove('active-menu');
-        // идиотская запись)))))
-      } else if (target.tagName === 'HEADER' || target.tagName === 'MAIN' || target.tagName === 'H1' && 'H2') {
-        menu.classList.remove('active-menu');
+      } else {
+        let target = event.target;
+        if (target.closest('menu')) {
+          if (target.closest('.close-btn')) {
+            menu.classList.remove('active-menu');
+          } else {
+            if (target.closest('a')) {
+              menu.classList.remove('active-menu');
+            }
+          }
+        } else menu.classList.remove('active-menu');
       }
     });
   };

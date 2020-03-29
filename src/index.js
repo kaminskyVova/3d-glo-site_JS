@@ -13,7 +13,6 @@ import chengeFoto from './modules/chengeFoto';
 import priceCalc from './modules/priceCalc';
 import sendFormAjax from './modules/sendFormAjax';
 
-
 //polifile
 import 'nodelist-foreach-polyfill';
 const elementClosest = require('element-closest');
